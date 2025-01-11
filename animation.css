@@ -1,0 +1,77 @@
+.navbar a, .navbar ul li {
+    opacity: 0;
+    animation: slideRight 1.5s ease-in-out forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero-image-animation {
+    opacity: 0;
+    animation: zommBounce 2s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+@keyframes zommBounce {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(-40deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+
+
+/* 
+.typing-text {
+    border-right: 2px solid #000;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(30, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+} */
+
+
+.typing-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+    animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
